@@ -29,7 +29,9 @@ VOLUME ["/bitnami/apache","/bitnami/dokuwiki", "/opt/bitnami/dokuwiki"]
 
 EXPOSE 80 443
 
-CMD [ "chmod", "+x", "/app-entrypoint.sh"]
-ENTRYPOINT ["/app-entrypoint.sh"]
+CMD  cd /
+CMD  sudo chmod +x ./app-entrypoint.sh
+
+ENTRYPOINT ["./app-entrypoint.sh"]
 
 CMD ["nami","start","--foreground","apache"]
