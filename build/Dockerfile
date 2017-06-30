@@ -25,12 +25,9 @@ ENV APACHE_HTTPS_PORT_NUMBER="443" \
 
 
 
-VOLUME ["/bitnami/apache","/bitnami/dokuwiki", "/opt/bitnami/dokuwiki"]
+VOLUME ["/bitnami/apache","/bitnami/dokuwiki","/opt/bitnami/dokuwiki/lib/plugins","/opt/bitnami/dokuwiki/lib/tpl"]
 
 EXPOSE 80 443
-
-CMD  cd /
-CMD  sudo chmod +x ./app-entrypoint.sh
 
 ENTRYPOINT ["./app-entrypoint.sh"]
 
