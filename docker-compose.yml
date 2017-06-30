@@ -11,7 +11,8 @@ services:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
       - '/srv/php-persistence:/bitnami/php'
-      - '/srv/dokuwiki-plugins:/opt/bitnami/dokuwiki/lib/tpl'
+      - '/srv/dokuwiki-template-persistence:/opt/bitnami/dokuwiki/lib/tpl'
+      - '/srv/dokuwiki-plugins-persistence:/opt/bitnami/dokuwiki/lib/tpl'
     environment:
       - DOKUWIKI_USERNAME=superuser
       - DOKUWIKI_FULL_NAME=Samer Machara
