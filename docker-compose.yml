@@ -4,8 +4,8 @@ services:
     image: 'bitnami/dokuwiki:latest'
     restart: always
     ports:
-      - '80:8080'
-      - '443:4433'
+      - '8080:80'
+      - '4433:443'
     volumes:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
