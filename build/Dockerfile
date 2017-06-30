@@ -25,10 +25,11 @@ ENV APACHE_HTTPS_PORT_NUMBER="443" \
 
 
 
-VOLUME ["/bitnami/apache","/bitnami/dokuwiki","/opt/bitnami/dokuwiki/lib/plugins","/opt/bitnami/dokuwiki/lib/tpl"]
+VOLUME ["/bitnami/apache","/bitnami/dokuwiki", "/opt/bitnami/dokuwiki/lib/plugins" , "/opt/bitnami/dokuwiki/lib/tpl"]
 
 EXPOSE 80 443
 
-ENTRYPOINT ["./app-entrypoint.sh"]
+
+ENTRYPOINT ["/app-entrypoint.sh"]
 
 CMD ["nami","start","--foreground","apache"]
