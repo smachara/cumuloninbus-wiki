@@ -11,7 +11,7 @@ services:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
       - '/srv/php-persistence:/bitnami/php'
-      - '/srv/dokuwiki-template-persistence:/opt/bitnami/dokuwiki/lib/tpl'
+      - '/srv/dokuwiki-tpl-persistence:/opt/bitnami/dokuwiki/lib/tpl'
       - '/srv/dokuwiki-plugins-persistence:/opt/bitnami/dokuwiki/lib/plugins'
     environment:
       - DOKUWIKI_USERNAME=superuser
