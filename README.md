@@ -29,3 +29,10 @@ services:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
       - '/srv/php-persistence:/bitnami/php'
+    environment:
+      - DOKUWIKI_PASSWORD=my_password
+      - DOKUWIKI_USERNAME: superuser
+      - DOKUWIKI_FULL_NAME: Samer Machara
+      - DOKUWIKI_PASSWORD: password
+      - DOKUWIKI_EMAIL: Doku samer.machara@telecom-sudparis.eu
+      - DOKUWIKI_WIKI_NAME: Cumuloninbus 
