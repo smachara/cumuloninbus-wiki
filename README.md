@@ -1,4 +1,19 @@
-# dokuwiki-cumuloninbus
+# cumuloninbus-wiki
+
+1. Get the files and spin up containers
+
+# Get smachara2 files
+git clone https://smachara@github.com/smachara/cumuloninbus-wiki.git
+cd cumulus-repository
+
+ Start the app, run containers
+   in the background
+ This will download and build the images
+   the first time you run this
+docker-compose up -d
+
+At this point, we've created containers and have them up and running.
+
 **Why use Bitnami Images?**
     Bitnami closely tracks upstream source changes and promptly publishes new versions of this image using our automated systems.
     With Bitnami images the latest bug fixes and features are available as soon as possible.
