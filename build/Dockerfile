@@ -23,7 +23,14 @@ ENV APACHE_HTTPS_PORT_NUMBER="443" \
     DOKUWIKI_WIKI_NAME="Bitnami DokuWiki" \
     PATH="/opt/bitnami/apache/bin:/opt/bitnami/php/bin:$PATH"
 
-
+CMD cd /tmp/
+CMD mkdir /tmp/plugins
+CMD cd /tmp/
+CMD mkdir /tmp/tpl
+CMD cp -r /opt/bitnami/dokuwiki/lib/tpl /tmp/tpl
+	
+CMD cp -r /opt/bitnami/dokuwiki/lib/plugins /tmp/plugins
+CMD cp -r /opt/bitnami/dokuwiki/lib/tpl /tmp/tpl
 
 VOLUME ["/bitnami/apache","/bitnami/dokuwiki", "/opt/bitnami/dokuwiki/lib/plugins" , "/opt/bitnami/dokuwiki/lib/tpl"]
 
@@ -31,5 +38,10 @@ EXPOSE 80 443
 
 
 ENTRYPOINT ["/app-entrypoint.sh"]
+
+CMD cp -r /tmp/plugins /opt/bitnami/dokuwiki/lib/plugins 
+CMD cp -r /tmp/tpl /opt/bitnami/dokuwiki/lib/tpl 
+CMD rm -r /tmp/plugins  
+CMD rm -r /tmp/tpl  
 
 CMD ["nami","start","--foreground","apache"]
