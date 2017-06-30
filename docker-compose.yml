@@ -1,7 +1,7 @@
 version: '2'
 services:
   dokuwiki:
-    image: 'smachara2/dokuwiki:1.0'
+    image: 'smachara2/dokuwiki:latest'
     restart: always
     ports:
       - '8080:80'
