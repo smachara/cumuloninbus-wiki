@@ -6,6 +6,7 @@ services:
     ports:
       - '8080:80'
       - '4433:443'
+      - '25':'25'
     volumes:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
