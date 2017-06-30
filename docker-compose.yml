@@ -6,13 +6,12 @@ services:
     ports:
       - '8080:80'
       - '4433:443'
-      - '25':'25'
+      - '25:25'
     volumes:
       - '/srv/dokuwiki-persistence:/bitnami/dokuwiki'
       - '/srv/apache-persistence:/bitnami/apache'
       - '/srv/php-persistence:/bitnami/php'
     environment:
-      - DOKUWIKI_PASSWORD=my_password
       - DOKUWIKI_USERNAME=superuser
       - DOKUWIKI_FULL_NAME=Samer Machara
       - DOKUWIKI_PASSWORD=password
