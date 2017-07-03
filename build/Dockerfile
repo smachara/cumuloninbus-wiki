@@ -27,7 +27,7 @@ CMD cd /tmp/
 CMD mkdir /tmp/plugins
 CMD cd /tmp/
 CMD mkdir /tmp/tpl
-CMD cp -r /opt/bitnami/dokuwiki/lib/tpl /tmp/tpl
+CMD cp -R /opt/bitnami/dokuwiki/lib/tpl /tmp/tpl
 	
 CMD cp -r /opt/bitnami/dokuwiki/lib/plugins /tmp/plugins
 CMD cp -r /opt/bitnami/dokuwiki/lib/tpl /tmp/tpl
